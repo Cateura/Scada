@@ -1,16 +1,28 @@
-<style>
-.slider.round:before{
-    border-radius: 50%
-}
-</style>
+<link rel="stylesheet" type="text/css" href="button.css">
 
-<body>
-    <h2>Led on/off</h2>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
+<main>
 
-    </label>
+    <!-- switch on/off -->
+	<input type="checkbox" id="i">
+	
+	<label for="i" class="checkbox">
+		<div class="checkbox__inner">
+			<div class="green__ball"></div>
+		</div>
+	</label>
+	<div class="checkbox__text">
+		<span>turned</span>
+		<div class="checkbox__text--options">
+			<span class="off">off</span>
+			<span class="on">on</span>
+		</div>
+	</div>
+</main>
 
-</body>
+
+
+<div class="support">
+	<a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+	<a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+</div>
 
