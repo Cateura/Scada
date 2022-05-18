@@ -13,7 +13,9 @@ p_R = GPIO.PWM(pins[0], 2000)
 p_G = GPIO.PWM(pins[1], 2000)
 
 
+app@route('/on')
+def on ():
+    print("hello World!")
 
 
 
-print("hello World!")
