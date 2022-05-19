@@ -18,10 +18,10 @@ const bcrypt = require('bcrypt')
 const initializePassport = require('./passport-config')
 
 // Create variables for MYSQL
-const mysql = require('mysql')
-const { redirect } = require('statuses')
-Server.set('views', path +"views");
-Server.set('view engine', 'ejs')
+// const mysql = require('mysql')
+// const { redirect } = require('statuses')
+// Server.set('views', path +"views");
+// Server.set('view engine', 'ejs')
 
 
 
