@@ -1,0 +1,357 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <title>Vase Admin Dashboard</title>
+
+        <!-- Librería de estilos que he cogido -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <!-- Donde cojo los estilos defindos en un fichero .CSS  -->
+        <link rel="stylesheet" type="text/css" href="/Styles_css/style.css">
+
+        <!-- Librería pra movimiento entre páginas -->
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+        <script defer type="text/javascript" src="/JS/script.js"></script>
+
+        <!-- Librerías de iconos -->
+        <!-- Boxiocns CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script defer src="/JS/pop_up.js"></script>
+        
+
+    </head>
+  
+
+
+    <body>
+
+        <!-- -------------- NAVIGATOR ------------------- -->
+        <div class="sidebar close">
+
+            <div class="logo-details">
+                <a href="/">
+                    <img src="/IMG/aurum-logo.png" alt="">
+                </a>
+              <span class="logo_name">Aurum process</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <!-- Dashboard ICON -->
+                <li>
+                    <a href="/Dashboard">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="/Dashboard">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <!-- DataBase ICON -->
+                    <div class="iocn-link">
+                        <a href="#">
+                            <i class='bx bx-collection' ></i>
+                            <span class="link_name">Database</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Database</a></li>
+                        <li><a href="/Database">MySQL</a></li>
+                        <li><a href="#">SQLite</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+
+                </li>
+
+              <!-- Post ICON -->
+                <li>
+
+                    <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-book-alt' ></i>
+                        <span class="link_name">SAP</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+
+                    <ul class="sub-menu">
+                    <li><a class="link_name" href="#">SAP</a></li>
+                    <li><a href="#">Hours per Project</a></li>
+                    <li><a href="#">Gant chart</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    </ul>
+
+                </li>
+
+              <!-- Analytics ICON -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="link_name">Analytics</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class='bx bx-line-chart' ></i>
+                    <span class="link_name">Chart</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Chart</a></li>
+                    </ul>
+                </li>
+
+
+              <!-- Plugins ICON -->
+                <li>
+                    <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-plug' ></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+                    <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Plugins</a></li>
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li>
+
+
+              <!-- Eplore ICON -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-compass' ></i>
+                    <span class="link_name">Drag and drop</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Drag and drop</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">History</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">History</a></li>
+                    </ul>
+                </li>
+
+              <!-- Settings ICON  -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="link_name">Setting</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                    </ul>
+                </li>
+              
+              
+                <li>
+
+                    <div class="profile-details">
+                    <div class="profile-content">
+                        <!--<img src="image/profile.jpg" alt="profileImg">-->
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Aurum</div>
+                        <div class="job">Worker</div>
+                    </div>
+                    <i class='bx bx-log-out' ></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <section class="home-section">
+
+            <div class="home-content">
+                <i class='bx bx-menu' ></i>
+                <span class="text"><h1>Database</h1></span>
+            </div>
+        
+
+            <div class="database-content">
+    
+                <div class="database-main">
+
+                    <!-- ------------------------------------- MYSQL ---------------------------------- -->
+                    <form action="/introduce_data" method="POST" >
+        
+        
+                        <!-- Botón de conexión -->
+                        <div class= "header-action">
+                            <button type="submit" class= "btn">Save Database</button>
+                        </div>
+        
+                        <!-- ------------------------------------- Introducir datos ---------------------------------- -->
+                        <!-- Input text -->
+                        <div class="form">
+                            <input type="text" id="Host_name" name="Host_name" class="form__input" autocomplete="off" placeholder=" ">
+                            <label for="Host_name" class="form__label">Host Name</label>
+                        </div>
+        
+                        <div class="form">
+                            <input type="text" id="User_name" name="User_name" class="form__input" autocomplete="off" placeholder=" ">
+                            <label for="User_name" class="form__label">User name</label>
+                        </div>
+        
+                        <div class="form">
+                            <input type="text" id="Password" name="Password"  class="form__input" autocomplete="off" placeholder=" ">
+                            <label for="Password" class="form__label">Password</label>
+                        </div>
+        
+                        <div class="form">
+                            <input type="text" id="DB_name" name="DB_name" class="form__input" autocomplete="off" placeholder=" ">
+                            <label for="DB_name" class="form__label">Database name</label>
+                        </div>
+        
+                        <!-- Logo Mysql -->
+                        <img src="/IMG/MySQL-Logo.png" alt="">
+        
+                    </form>
+
+                </div>
+
+
+                <div class="database-main">
+
+
+                    <form action="/refresh" method="GET">
+
+
+                        <!-- Botón de refrescar -->
+                        <div class= "header-action">
+                            <button type="submit" class= "btn">Refresh</button>
+                        </div>
+        
+                        <!-- ------------------------------------- Mostrar datos ---------------------------------- -->
+        
+                    </form>
+
+                    <table id="DB_Machines" class="content-table">
+                        <tr>
+                            <th scope="col">Host Name</th>
+                            <th scope="col">User name</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Database name</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Connect</th>
+                        </tr>
+    
+                        <tbody>
+
+                            <% if(Machine_db) { %>
+
+                                <% for(var i=0; i<Machine_db.length; i++) { %>
+                                    <tr>
+                                        
+                                        <!-- data -->
+                                        <th><%= Machine_db[i].host %></th>
+                                        <th><%= Machine_db[i].user %></th>
+                                        <th><%= Machine_db[i].password %></th>
+                                        <th><%= Machine_db[i].database %></th>
+
+                                        <th><a href="" class="btn btn-info">Edit</a></th>
+
+                                        <!-- <form action="/delete/<%= Machine_db[i].host %>" method="POST">
+                                            <th><button type="submit" class="btn">Delete</button></th> 
+                                        </form> -->
+
+                                        <!-- Pop up when we want to remove -->
+                                        <th><button data-modal-target="#modal" type="submit">Remove</button></th>
+
+                                        <!-- Pop up display -->
+                                        <div class="modal" id="modal">
+
+                                            <div class="modal-header">
+                                                <div class="title">Advise</div>
+                                                
+                                            </div>
+
+                                            <div class="modal-body">
+                                                Are you sure to remove host: <%= Machine_db[i].host %>? 
+
+                                                <form action="/delete/<%= Machine_db[i].host %>" method="POST">
+                                                    <button type="submit" class="btn">Confirm</button>
+                                                </form> 
+
+                                                <button data-close-button class="close-button">Cancel</button>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="overlay"></div>
+
+                                        <!-- Checkbox connection -->
+                                        <th><input type="checkbox" name="Connect" onclick="select()"/></th> 
+
+
+  
+                                    </tr>
+                                    <% } %>
+
+                            <% } %>
+
+
+
+
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div> 
+
+
+            </div>
+            
+        
+        </section>
+
+
+
+
+        <!-- Movimiento del navegador -->
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+  
+            for (var i = 0; i < arrow.length; i++) {
+              arrow[i].addEventListener("click", (e)=>{
+             let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+             arrowParent.classList.toggle("showMenu");
+              });
+            }
+  
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+  
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", ()=>{
+              sidebar.classList.toggle("close");
+  
+            });
+        </script>
+
+    </body>
+</html>
