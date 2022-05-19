@@ -264,49 +264,16 @@ body{
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
-
-
 }
-
 .sidebar.close ~ .home-section{
   left: 78px;
   width: calc(100% - 78px);
 }
 
 
-.database-content{
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns:1fr 1.8fr;
-  grid-gap: 80px;
-  padding-left: 15px;
-  padding-right: 15px;
-  min-height: 200px;
-  margin: auto;
-
-
-}
-
-.database-content .database-main{
-
-  position: relative;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 20px;
-  background: rgba(185, 166, 166, 0.75);
-}
-
-.sidebar.close ~ .database-content{
-  left: 78px;
-  width: calc(100% - 78px);
-}
-
-.database-content img{
-  width: 130px;
-  height: 150px;
+.home-section img{
+  width: 150px;
+  height: 170px;
   margin-left: 95px;
   margin-top: 15px;
 
@@ -325,7 +292,7 @@ body{
   width: 150px;
   padding: 10px 0;
   text-align: center;
-  margin: 20px 10px 15px 0px;
+  margin: 20px 10px;
   border-radius: 25px;
   font-weight: bold;
   border: 3px solid #009688;
@@ -335,10 +302,7 @@ body{
   position: relative;
   overflow: hidden;
   margin-left: 95px;
-
   transition: all 0.5s linear;
-
-
 }
 
 .header-action button:hover,
@@ -348,6 +312,7 @@ background: #009688;
 border-color: rgba(0, 0, 0, 0.2);
 
 }
+
 
 .header-action button:active{
     
@@ -373,10 +338,10 @@ border-color: rgba(0, 0, 0, 0.2);
 /*-------------------------- MAIN -------------------------------*/
 
 .home-section .home-content{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
 
 }
 
@@ -535,24 +500,24 @@ main{
 
 /*----------------------------Gráfico Línea----------------------*/
 .graph-card{
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns:2fr 1fr;
-  grid-gap: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  min-height: 200px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    grid-gap: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 200px;
 
 }
 .graph-card .graph-content{
-  position: relative;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 20px;
-  background: rgba(255,255,255,0.75);
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    background: rgba(255,255,255,0.75);
 }
 
 Texto del encabezado
@@ -661,7 +626,7 @@ Texto del encabezado
 }
 
 .form__input {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -719,115 +684,3 @@ reduce the size of the label and move upwards
 }
 
 
-
-
-/* Tabla */
-.content-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  min-width: 400px;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 253, 253, 0.15);
-  margin: auto;
-}
-
-.content-table thead tr {
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-}
-
-.content-table th,
-.content-table td {
-  padding: 12px 15px;
-}
-
-.content-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.content-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-.content-table tbody tr.active-row {
-  font-weight: bold;
-  color: #009879;
-}
-
-
-
-
-
-/* Pop Up */
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 2px solid black;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: rgba(78, 216, 89, 0.75);
-  width: 500px;
-  max-width: 80%;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-header {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-}
-
-.modal-header .title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.modal-header .close-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.modal-body {
-  padding: 10px 15px;
-}
-
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}

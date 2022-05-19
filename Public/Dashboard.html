@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<!-- Selccionamos el idioma deseado -->
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <title>Vase Admin Dashboard</title>
+
+        <!-- Librería de estilos que he cogido -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <!-- Donde cojo los estilos defindos en un fichero .CSS  -->
+        <link rel="stylesheet" type="text/css" href="/Styles_css/style.css">
+
+        <!-- Librería pra movimiento entre páginas -->
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+
+        <!-- fichero de funciones JS -->
+        <script type="text/javascript" src="/JS/script.js"></script>
+
+        <!-- LIBRERÍA DE GRÁFICOS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="/JS/jquery.easypiechart.js"></script> 
+
+        <!-- Librerías de iconos -->
+        <!-- Boxiocns CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+    </head>
+
+    <body>
+
+        <!-- ---------------------------- LIBRERIAS -------------------------- -->
+
+        <!-- FUENTE DE LOS ICONOS -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- Librería de gráficas línea sin redondeo -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script> -->
+
+        <!-- Librería de gráficas línea con redondeo -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+ 
+
+
+        <!-- -------------- NAVIGATOR ------------------- -->
+        <div class="sidebar close">
+
+            <div class="logo-details">
+                <a href="main.html">
+                    <img src="/IMG/aurum-logo.png" alt="">
+                </a>
+              <span class="logo_name">Aurum process</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <!-- Dashboard ICON -->
+                <li>
+                    <a href="/Dashboard.html">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="/Dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <!-- DataBase ICON -->
+                    <div class="iocn-link">
+                        <a href="/Database.html">
+                            <i class='bx bx-collection' ></i>
+                            <span class="link_name">Database</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="/Database.html">Database</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">SQLite</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+
+                </li>
+
+              <!-- Post ICON -->
+                <li>
+
+                    <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-book-alt' ></i>
+                        <span class="link_name">SAP</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+
+                    <ul class="sub-menu">
+                    <li><a class="link_name" href="#">SAP</a></li>
+                    <li><a href="#">Hours per Project</a></li>
+                    <li><a href="#">Gant chart</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    </ul>
+
+                </li>
+
+              <!-- Analytics ICON -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="link_name">Analytics</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class='bx bx-line-chart' ></i>
+                    <span class="link_name">Chart</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Chart</a></li>
+                    </ul>
+                </li>
+
+
+              <!-- Plugins ICON -->
+                <li>
+                    <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-plug' ></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+                    <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Plugins</a></li>
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li>
+
+
+              <!-- Eplore ICON -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-compass' ></i>
+                    <span class="link_name">Drag and drop</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Drag and drop</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">History</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">History</a></li>
+                    </ul>
+                </li>
+
+              <!-- Settings ICON  -->
+                <li>
+                    <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="link_name">Setting</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                    </ul>
+                </li>
+              
+              
+                <li>
+
+                    <div class="profile-details">
+                    <div class="profile-content">
+                        <!--<img src="image/profile.jpg" alt="profileImg">-->
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Aurum</div>
+                        <div class="job">Worker</div>
+                    </div>
+                    <i class='bx bx-log-out' ></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <section class="home-section">
+            <div class="home-content">
+              <i class='bx bx-menu' ></i>
+              <span class="text"><h1>Dashboard</h1></span>
+            </div>
+
+            <div class= "header-action">
+                <button class= "btn"><span></span>Upload</button>
+            </div>
+
+            <main>
+
+                <!-- Etiquetas superiores -->
+                <section>
+                    <h3 class="section-head">Overview</h3>
+                    <div class="analytics">
+                        <!-- Generamos las viñetas de informacion centrales -->
+
+                        <!-- Bolsas totales -->
+                        <div class="analytic">
+                            
+                            <div class="analytic-icon">
+                                <span class="las la-shopping-bag"></span>
+                            </div>
+                            <div class="analytic-info">
+                                <h4>Total Bags (uds)</h4>
+                                <h1>300</h1>
+                            </div>
+
+                        </div>
+
+                        <!-- Precio por Bolsa -->
+                        <div class="analytic">
+                            
+                            <div class="analytic-icon">
+                                <!-- <img src="https://img.icons8.com/ios/50/000000/price-tag-euro.png"/> -->
+                                <span class="las la-euro-sign"></span>
+                            </div>
+                            <div class="analytic-info">
+                                <h4>Price/unit (€/ud)</h4>
+                                <h1>2,5 <small class="text-price">5%</small></h1>
+                            </div>
+
+                        </div>
+
+                        <!-- Peso medio de las bolsas -->
+                        <div class="analytic">
+        
+                            <div class="analytic-icon">
+                                <!-- <img src="https://img.icons8.com/ios/50/000000/price-tag-euro.png"/> -->
+                                <span class="las la-weight"></span>
+                            </div>
+                            <div class="analytic-info">
+                                <h4>Av. Weight (gr)</h4>
+                                <h1>320 <small class="text-weight">12%</small></h1>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Coste pasivo máquina -->
+                        <div class="analytic">
+        
+                            <div class="analytic-icon">
+                                <!-- <img src="https://img.icons8.com/ios/50/000000/price-tag-euro.png"/> -->
+                                <span class="las la-euro-sign"></span>
+                            </div>
+                            <div class="analytic-info">
+                                <h4>Passive price (€)</h4>
+                                <h1>600 <small class="text-passve-price">8%</small></h1>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gráfico 1, sección  ------------- DESCRIPCIÓN PROCESO ------------  -->
+                <section>
+                    <div class="graph-card">
+                        
+                        <div class="graph-content">
+                            <div class="graph-head">
+                                <h3 class="section-header">Proceso Producción</h3>
+
+                                <div class="graph-select">
+
+                                    <select name="" id="">
+                                        <option value="">Enero</option>
+                                        <option value="">Febrero</option>
+                                        <option value="">Marzo</option>
+                                        <option value="">Abril</option>
+                                        <option value="">Mayo</option>
+                                        <option value="">Junio</option>
+                                        <option value="">Julio</option>
+                                        <option value="">Agosto</option>
+                                        <option value="">Septiembre</option>
+                                        <option value="">Octubre</option>
+                                        <option value="">Noviembre</option>
+                                        <option value="">Diciembre</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="graph-board">
+                                <canvas id="revenueChart" width="100%" height="40px">
+
+                                </canvas>
+
+                            </div>
+
+
+
+                        </div>
+
+                        
+                        <div class="graph-content">
+                            <div class="graph-head">
+                                <h3 class="section-header">Costes Producción</h3>
+
+
+                                <div class="graph-select">
+
+                                    <select name="" id="">
+                                        <option value="">Enero</option>
+                                        <option value="">Febrero</option>
+                                        <option value="">Marzo</option>
+                                        <option value="">Abril</option>
+                                        <option value="">Mayo</option>
+                                        <option value="">Junio</option>
+                                        <option value="">Julio</option>
+                                        <option value="">Agosto</option>
+                                        <option value="">Septiembre</option>
+                                        <option value="">Octubre</option>
+                                        <option value="">Noviembre</option>
+                                        <option value="">Diciembre</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="graph-board">
+                                <canvas id="Cicular_Chart_Cost" width="100%" height="80px">
+
+                                </canvas>
+
+                            </div>
+                           
+
+
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <!-- Gráfico 2, sección  ------------- DESCRIPCIÓN PROCESO SECUNDARIO ------------  -->
+                <section>
+                    <div class="graph-card">
+                        
+                        <div class="graph-content">
+                            <div class="graph-head">
+                                
+                                <h3 class="section-header">Proceso Secundario</h3>
+
+                                <div class="gprah-select">
+
+                                    <select name="" id="">
+                                        <option value="">CIP</option>
+                                        <option value="">ESTERLIZACIÓN</option>
+                                        <option value="">AGUA ESTÉRIL</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="graph-board">
+                                <canvas id="Second_chart" width="100%" height="40px">
+
+                                </canvas>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="graph-content">
+
+                            <div class="graph-head">
+                                <h3 class="section-header">Recursos</h3>
+
+
+                                <div class="graph-select">
+
+                                    <select name="" id="">
+                                        <option value="">Enero</option>
+                                        <option value="">Febrero</option>
+                                        <option value="">Marzo</option>
+                                        <option value="">Abril</option>
+                                        <option value="">Mayo</option>
+                                        <option value="">Junio</option>
+                                        <option value="">Julio</option>
+                                        <option value="">Agosto</option>
+                                        <option value="">Septiembre</option>
+                                        <option value="">Octubre</option>
+                                        <option value="">Noviembre</option>
+                                        <option value="">Diciembre</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="graph-board">
+                                <canvas id="Bar_Chart_Cost" width="100%" height="80px">
+
+                                </canvas>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>                 
+ 
+
+            </main>
+
+
+        </section>
+
+
+
+
+
+        <!-- Movimiento del navegador -->
+        <script>
+          let arrow = document.querySelectorAll(".arrow");
+
+          for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+           let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+           arrowParent.classList.toggle("showMenu");
+            });
+          }
+
+          let sidebar = document.querySelector(".sidebar");
+          let sidebarBtn = document.querySelector(".bx-menu");
+
+          console.log(sidebarBtn);
+          sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+
+          });
+        </script>
+
+
+        <!-- GRÁFICO LÍNEA PROCESO PROUCCIÓN-->
+        <script>
+            Chart.defaults.global.defaultFontFamily = "Poppins";
+            let ctx_1 = document.querySelector("#revenueChart");
+            // ctx.height = 150;
+
+            let revChart_1 = new Chart(ctx_1, {
+
+                type:"line",
+                data: {
+
+                    // Valores en el eje X
+                    labels: ["Sept 1", "Sept 3", "Sept 6", "Sept 9", "Sept 12", "Sept 15", "Sept 18" ],
+                    datasets: [
+                        {
+                        // Gráfica 1
+                        label:"Pressure",
+                        borderColor: "green",
+                        borderWidth: "3",
+                        backgroundColor: "rgba(235,247,245,0.5)",
+                        // Valores eje Y
+                        data:[0,50,20,35,10,60,100]
+                        },
+                    
+                        {
+                        // Gráfica 2
+                        label:"Temperature",
+                        borderColor: "blue",
+                        borderWidth: "3",
+                        backgroundColor: "rgba(233,238,253,0.5)",
+                        // Valores eje Y
+                        data:[0,20,50,80,60,20,55]
+                        }
+                
+                    ]
+                }, 
+
+                options: {
+                    responsive: true,
+                    tooltips:{
+                        intersect: false,
+                        node: "index"
+                    }
+                }
+
+            });
+
+        </script>
+
+        <!-- GRÁFIO LÍNEA PROCESO SECUNDARIO -->
+        <script>
+            Chart.defaults.global.defaultFontFamily = "Poppins";
+            let ctx_2 = document.querySelector("#Second_chart");
+            // ctx.height = 150;
+
+            let revChart_2 = new Chart(ctx_2, {
+
+                type:"line",
+                data: {
+
+                    // Valores en el eje X
+                    labels: ["Oct 1", "Oct 3", "Oct 6", "Oct 9", "Oct 12", "Oct 15", "Oct 18" ],
+                    datasets: [
+                        {
+                        // Gráfica 1
+                        label:"Pressure",
+                        borderColor: "blue",
+                        borderWidth: "3",
+                        backgroundColor: "rgba(235,247,245,0.5)",
+                        // Valores eje Y
+                        data:[0,50,20,35,10,60,100]
+                        },
+                    
+                        {
+                        // Gráfica 2
+                        label:"Temperature",
+                        borderColor: "green",
+                        borderWidth: "3",
+                        backgroundColor: "rgba(233,238,253,0.5)",
+                        // Valores eje Y
+                        data:[0,10,50,50,60,50,10]
+                        }
+                
+                    ]
+                }, 
+
+                options: {
+                    responsive: true,
+                    tooltips:{
+                        intersect: false,
+                        node: "index"
+                    }
+                }
+
+            });
+
+        </script>
+
+        <!-- GRÁFICO CIRCULAR QUESOS CON PORCENTAJES -->
+        <script>
+            Chart.defaults.global.defaultFontFamily = "Poppins";
+            let Cicular_Chart = document.querySelector("#Cicular_Chart_Cost");
+            
+
+            let HTML_Cicular_Chart = new Chart(Cicular_Chart, {
+
+                type:"polarArea",
+                data: {
+
+                    // Valores en el eje X
+                    labels: ["CIP", "Esteriliación", "Mano de obra", "Producción", "Productos"],
+                    datasets: [
+                        {
+                        // Gráfica 1
+                        borderColor: [
+                            "rgba(255,1,10,1)",
+                            "rgba(1,1,255,1)",
+                            "rgba(1,255,1,1)",
+                            "rgba(255,1,255,1)",
+                            "rgba(235,255,1,1)",                       
+                        ],
+                        borderWidth: "1",
+                        backgroundColor: [
+                            "rgba(255,1,10,0.2)",
+                            "rgba(1,1,255,0.2)",
+                            "rgba(1,255,1,0.2)",
+                            "rgba(255,1,255,0.2)",
+                            "rgba(235,255,1,0.2)",
+                        ],
+                        // Valores eje Y
+                        data:[10,50,20,35,80]
+                        },
+                
+                
+                    ]
+                }, 
+
+                options: {
+                    responsive: true,
+                    tooltips:{
+                        intersect: false,
+                        node: "index"
+                    }
+                }
+
+            });
+
+        </script>
+
+        <!-- GRÁFICO BARRAS CANTIDADES PRODUCTO UTILIZADOS -->
+        <script>
+            Chart.defaults.global.defaultFontFamily = "Poppins";
+            let Bar_Chart = document.querySelector("#Bar_Chart_Cost");
+            
+
+            let HTML_Bar_Chart = new Chart(Bar_Chart, {
+
+                type:"bar",
+                data: {
+
+                    // Valores en el eje X
+                    labels: ["Electricidad (kWh)", "Sosa (L)", "Ácido (L)", "Agua (L)"],
+                    datasets: [{
+                        // Poner el gráfico en horizontal
+                        axis: 'y', 
+                        // Gráfica 1
+                        label: "Consumos",
+                        fill:false,
+
+                        borderColor: [
+                            "rgba(255,1,10,1)",
+                            "rgba(1,1,255,1)",
+                            "rgba(1,255,1,1)",
+                            "rgba(255,1,255,1)",                      
+                        ],
+                        borderWidth: "1",
+                        backgroundColor: [
+                            "rgba(255,1,10,0.2)",
+                            "rgba(1,1,255,0.2)",
+                            "rgba(1,255,1,0.2)",
+                            "rgba(255,1,255,0.2)",
+                        ],
+                        // Valores eje Y
+                        data:[80,50,20,35]
+                        },
+
+
+                
+                    ]
+                }, 
+
+                options: {
+                    
+                    indexAxis: 'y',
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    },
+                }
+
+            });
+
+        </script>
+
+        <!-- GRÁFICO DE PORCENTAJE -->
+        <!-- <script>
+            //create instance
+            $('.chart').easyPieChart({
+                animate: 2000, //Tiempo de animación en ms
+                lineWidth: 5, //Grosor de la barra
+                scaleColor: false, //Eliminarmos las lineas de esala del cícurlo
+                
+                
+                
+            });
+            
+        </script> -->
+
+
+
+
+
+
+
+
+        
+    </body>
+
+
+</html>
