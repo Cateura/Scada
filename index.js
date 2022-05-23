@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 //--------------- SCREENS ----------------------
 
 // Public
-app.use(express.static('Public'))
+app.use(express.static('public'))
 
 // Routes
 app.use(require("./routes/index"));
