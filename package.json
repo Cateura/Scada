@@ -17,6 +17,7 @@
     "depd": "^1.1.2",
     "destroy": "^1.0.4",
     "ee-first": "^1.1.1",
+    "ejs": "^3.1.8",
     "encodeurl": "^1.0.2",
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
@@ -56,8 +57,8 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "devStart": "nodemon Server.js",
-    "start": "node server.js"
+    "devStart": "nodemon app.js",
+    "start": "node app.js"
   },
   "author": "Fernando",
   "license": "ISC",
@@ -65,5 +66,3 @@
     "nodemon": "^2.0.15"
   }
 }
-
-

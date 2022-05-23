@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <title>Vase Admin Dashboard</title>
+
+        <!-- Librería de estilos que he cogido -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <!-- Donde cojo los estilos defindos en un fichero .CSS  -->
+        <link rel="stylesheet" type="text/css" href="/styles/style.css">
+
+        <!-- Librería pra movimiento entre páginas -->
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+        <script defer type="text/javascript" src="/js/script.js"></script>
+
+        <!-- Librerías de iconos -->
+        <!-- Boxiocns CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        
+
+    </head>
+  
+
+
+    <body>
+
+        <!-- Navigator -->
+        <%- include('partials/navigator') %>
+ 
+
+        <section class="home-section">
+            <div class="home-content">
+              <i class='bx bx-menu' ></i>
+              <span class="text"><h1>Database</h1></span>
+            </div>
+
+
+
+            <!-- Botón de conexión -->
+            <div class= "header-action">
+                <button onclick="get_text()" class= "btn">Connection</button>
+            </div>
+
+
+            <!-- ------------------------------------- MYSQL ---------------------------------- -->
+            <!-- Input text -->
+            <div class="form">
+                <input type="text" id="Host_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="Host_name" class="form__label">Host Name</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="User_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="User_name" class="form__label">Usar name</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="Password" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="Password" class="form__label">Password</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="DB_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="DB_name" class="form__label">Database name</label>
+            </div>
+
+            <img src="/IMG/MySQL-Logo.png" alt="">
+
+        </section>
+        
+        <!-- Movimiento del navegador -->
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+  
+            for (var i = 0; i < arrow.length; i++) {
+              arrow[i].addEventListener("click", (e)=>{
+             let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+             arrowParent.classList.toggle("showMenu");
+              });
+            }
+  
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+  
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", ()=>{
+              sidebar.classList.toggle("close");
+  
+            });
+        </script>
+
+    </body>
+</html>
