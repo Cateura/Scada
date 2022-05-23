@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 
-// Dashboard HTML 
-router.get('/index', (req, res) => {
+// index 
+router.get('/', (req, res) => {
     res.render('index')
 });
 
