@@ -17,7 +17,7 @@
         <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
 
         <!-- fichero de funciones JS -->
-        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="/JS/script.js"></script>
 
         <!-- LIBRERÍA DE GRÁFICOS -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -66,6 +66,17 @@
                         <div class="graph-content">
 
                             <img src="/IMG/scada.png" alt="">
+
+
+                            <div class='toggle' id='switch'>
+                                <div class='toggle-text-off'>OFF</div>
+                                <div class='glow-comp'></div>
+                                <div class='toggle-button'></div>
+                                <div class='toggle-text-on'>ON</div>
+                            </div>
+                          
+                              
+                              
                             
                         </div>
                     </div>
@@ -77,8 +88,6 @@
 
 
         </section>
-
-
 
 
 
@@ -101,9 +110,18 @@
             sidebar.classList.toggle("close");
 
           });
+
         </script>
 
-
+        <!-- efecto botón -->
+        <script>
+            
+            $('.toggle').click(function(e){
+                e.preventDefault(); // The flicker is a codepen thing
+                $(this).toggleClass('toggle-on');
+            });
+            
+        </script>
 
 
 
