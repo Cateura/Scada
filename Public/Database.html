@@ -31,6 +31,9 @@
 
     <body>
 
+        <!-- Ejecutamos el fichero de funciones de java -->
+        <script type="text/javascript" src="/JS/script.js"></script>
+
         <!-- -------------- NAVIGATOR ------------------- -->
         <div class="sidebar close">
 
@@ -79,16 +82,16 @@
                     <div class="iocn-link">
                     <a href="#">
                         <i class='bx bx-book-alt' ></i>
-                        <span class="link_name">SAP</span>
+                        <span class="link_name">Posts</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow' ></i>
                     </div>
 
                     <ul class="sub-menu">
-                    <li><a class="link_name" href="#">SAP</a></li>
-                    <li><a href="#">Hours per Project</a></li>
-                    <li><a href="#">Gant chart</a></li>
-                    <li><a href="#">Maintenance</a></li>
+                    <li><a class="link_name" href="#">Posts</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
                     </ul>
 
                 </li>
@@ -125,9 +128,9 @@
                     </div>
                     <ul class="sub-menu">
                     <li><a class="link_name" href="#">Plugins</a></li>
-                    <li><a href="#">Option 1</a></li>
-                    <li><a href="#">Option 2</a></li>
-                    <li><a href="#">Option 3</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
                     </ul>
                 </li>
 
@@ -136,10 +139,10 @@
                 <li>
                     <a href="#">
                     <i class='bx bx-compass' ></i>
-                    <span class="link_name">Drag and drop</span>
+                    <span class="link_name">Explore</span>
                     </a>
                     <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Drag and drop</a></li>
+                    <li><a class="link_name" href="#">Explore</a></li>
                     </ul>
                 </li>
                 <li>
@@ -171,8 +174,8 @@
                         <!--<img src="image/profile.jpg" alt="profileImg">-->
                     </div>
                     <div class="name-job">
-                        <div class="profile_name">Aurum</div>
-                        <div class="job">Worker</div>
+                        <div class="profile_name">Prem Shahi</div>
+                        <div class="job">Web Desginer</div>
                     </div>
                     <i class='bx bx-log-out' ></i>
                     </div>
@@ -187,89 +190,37 @@
               <span class="text"><h1>Database</h1></span>
             </div>
 
+
+
+            <!-- Botón de conexión -->
+            <div class= "header-action">
+                <button onclick="get_text()" class= "btn">Connection</button>
+            </div>
+
+
             <!-- ------------------------------------- MYSQL ---------------------------------- -->
-            <form action="/introduce_data" method="POST">
+            <!-- Input text -->
+            <div class="form">
+                <input type="text" id="Host_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="Host_name" class="form__label">Host Name</label>
+            </div>
 
+            <div class="form">
+                <input type="text" id="User_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="User_name" class="form__label">Usar name</label>
+            </div>
 
-                <!-- Botón de conexión -->
-                <div class= "header-action">
-                    <button type="submit" class= "btn">Connection</button>
-                </div>
+            <div class="form">
+                <input type="text" id="Password" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="Password" class="form__label">Password</label>
+            </div>
 
-                <!-- ------------------------------------- Introducir datos ---------------------------------- -->
-                <!-- Input text -->
-                <div class="form">
-                    <input type="text" id="Host_name" name="Host_name" class="form__input" autocomplete="off" placeholder=" ">
-                    <label for="Host_name" class="form__label">Host Name</label>
-                </div>
+            <div class="form">
+                <input type="text" id="DB_name" class="form__input" autocomplete="off" placeholder=" ">
+                <label for="DB_name" class="form__label">Database name</label>
+            </div>
 
-                <div class="form">
-                    <input type="text" id="User_name" name="User_name" class="form__input" autocomplete="off" placeholder=" ">
-                    <label for="User_name" class="form__label">User name</label>
-                </div>
-
-                <div class="form">
-                    <input type="text" id="Password" name="Password"  class="form__input" autocomplete="off" placeholder=" ">
-                    <label for="Password" class="form__label">Password</label>
-                </div>
-
-                <div class="form">
-                    <input type="text" id="DB_name" name="DB_name" class="form__input" autocomplete="off" placeholder=" ">
-                    <label for="DB_name" class="form__label">Database name</label>
-                </div>
-
-                <!-- Logo Mysql -->
-                <img src="/IMG/MySQL-Logo.png" alt="">
-
-            </form>
-
-
-            <form action="/refresh" method="GET">
-
-
-                <!-- Botón de refrescar -->
-                <div class= "header-action">
-                    <button type="submit" class= "btn">Refresh</button>
-                </div>
-
-                <!-- ------------------------------------- Mostrar datos ---------------------------------- -->
-                <table>
-                    <tr>
-                        <th scope="col">Host Name</th>
-                        <th scope="col">User name</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Database name</th>
-                    </tr>
-
-                    <script>
-
-                        if(userData.length!=0){
-                            var i=1;
-                            userData.forEach(function(data){
-                                <tr>
-                                    <td>=i;</td>
-                                    <td>=data.host</td>
-                                    <td>=data.user</td>
-                                    <td>=data.password</td>
-                                    <td>=data.database</td>
-
-                                </tr>
-                                i++; 
-                            })
-                        
-                        } else{
-                            <tr>
-                                <td colspan="7">No Data Found</td>
-                            </tr>
-                        }
-
-                    </script>
-
-                </table>
-
-
-
-            </form>
+            <img src="/IMG/MySQL-Logo.png" alt="">
 
         </section>
         
